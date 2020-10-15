@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "bug-ionic-vue-backpage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
