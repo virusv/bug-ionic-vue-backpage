@@ -2,28 +2,26 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Home</ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button />
+        </ion-buttons>
+        
+        <ion-title>Product page</ion-title>
       </ion-toolbar>
     </ion-header>
     
     <ion-content :fullscreen="true">
-      <h1>HOME</h1>
+      <h1>SINGLE</h1>
 
-      <ion-button color="primary" @click="$router.push({
-        name: 'products',
-        query: {
-          cat: 1,
-          order: 'price'
-        }
-      })">
-        GO TO PAGE PRODUCTS
+      <ion-button color="primary" @click="$router.back()">
+        BACK
       </ion-button>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonBackButton, IonButtons } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -34,7 +32,9 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
-    IonButton
+    IonButton,
+    IonBackButton,
+    IonButtons
   }
 });
 </script>
